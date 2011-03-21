@@ -1,6 +1,7 @@
 task :environment do
   env = ENV["RACK_ENV"] ? ENV["RACK_ENV"] : "development"
   ActiveRecord::Base.establish_connection(YAML::load(File.open('config/database.yml'))[env])
+  ActiveRecord::Base.logger = Logger.new(STDOUT)
 end
 
 namespace :db do
