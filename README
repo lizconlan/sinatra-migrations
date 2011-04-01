@@ -1,0 +1,3 @@
+To use, drop the migrations.rake file into your tasks directory and paste the following into your Rakefile:
+
+Dir["tasks/*.rake"].sort.each { |ext| load ext }
